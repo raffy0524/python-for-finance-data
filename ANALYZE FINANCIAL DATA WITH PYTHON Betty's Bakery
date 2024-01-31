@@ -1,0 +1,26 @@
+# Task 1
+import numpy as np
+
+# Task 2
+cupcakes = np.array([2, 0.75, 2, 1, 0.5])
+
+# Task 3
+recipes = np.genfromtxt('recipes.csv', delimiter=',', skip_header=1, filling_values=0)
+
+# Task 4
+print(recipes)
+
+# Task 5
+eggs = recipes[:, 2]
+
+# Task 6
+eggs_require_1 = eggs == 1
+
+# Task 7
+cookies = recipes[2]
+
+# Task 8
+double_batch = cupcakes * 2
+
+# Task 9
+grocery_list = cookies + double_batch
