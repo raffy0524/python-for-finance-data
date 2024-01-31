@@ -1,0 +1,30 @@
+#Rafael Castillo
+#receipts for lovely loveseats from codecademy 
+#analyzing financial data with python
+
+#declare first variable
+lovely_loveseat_description = "Lovely Loveseat. Tufted polyester blend on wood. 32 inches high x 40 inches wide x 30 inches deep. Red or white."
+#variable price
+lovely_loveseat_price = 254.00
+#second variable
+stylish_settee_description = "Stylish Settee. Faux leather on birch. 29.50 inches high x 54.75 inches wide x 28 inches deep. Black."
+#second variable price
+stylish_settee_price = 180.50
+#third variable
+luxurious_lamp_description = "Luxurious Lamp. Glass and iron. 36 inches tall. Brown with cream shade."
+#third variable price
+luxurious_lamp_price = 52.15
+#business sales tax
+sales_tax = 0.088
+#customer 1
+customer_one_total = 254.00 + 52.15 + 0.088
+#customer one items
+customer_one_itemization = "the lovely loveseat"
+#calculation taxes
+customer_one_tax = customer_one_total * sales_tax
+#print
+print("Customer One Items:")
+print(customer_one_itemization)
+print("Customer one total:")
+print(customer_one_total)
+print(customer_one_tax)
