@@ -1,0 +1,32 @@
+import codecademylib3
+# Task 1: Load data into a DataFrame called inventory
+import pandas as pd
+
+inventory = pd.read_csv('inventory.csv')
+
+# Task 2: Inspect the first 10 rows of inventory
+print(inventory.head(10))
+
+# Task 3: Select the first 10 rows (Staten Island) and save them to staten_island
+staten_island = inventory.head(10)
+
+# Task 4: Select the column product_description from staten_island and save it to the variable product_request
+product_request = staten_island['product_description']
+
+# Task 5: Select rows where location is Brooklyn and product_type is seeds, save to seed_request
+seed_request = inventory[(inventory['location'] == 'Brooklyn') & (inventory['product_type'] == 'seeds')]
+
+# Task 6: Add a column to inventory called in_stock (True if quantity > 0, False if quantity == 0)
+inventory['in_stock'] = inventory['quantity'] > 0
+
+# Task 7: Create a column called total_value (price * quantity)
+inventory['total_value'] = inventory['price'] * inventory['quantity']
+
+# Task 8: Create a lambda function for combining product_type and product_description
+combine_lambda = lambda row: '{} - {}'.format(row.product_type, row.product_description)
+
+# Task 9: Create a new column in inventory called full_description using combine_lambda
+inventory['full_description'] = inventory.apply(combine_lambda, axis=1)
+
+# Print the modified inventory DataFrame
+print(inventory)
